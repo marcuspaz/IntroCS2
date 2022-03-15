@@ -126,7 +126,7 @@ public class MaxOfArray {
 ## Array of objects
 
 - We know that arrays must be declared **and** instantiated, indicating how many slots there are in the array. 
-- Keep in mind thaht arrays of objects in that each element must **also** be instantiated! 
+- Keep in mind that arrays of objects in that each element must **also** be instantiated! 
 
 **Here's a example of code that does all of the above:**
 
