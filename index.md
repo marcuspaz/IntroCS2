@@ -191,7 +191,7 @@ Student student2 = student1; // student2 is a shallow copy of student1
 - To perform a deep copy, we need to create something called a **copy constructor** defined in the object we are copying. 
 
 **Copy Constructor:**
-- Really concept of overloading, applies to any methods tht share th same name but different number or ordering of parameters. 
+- Really concept of overloading, applies to any methods that share the same name but different number or ordering of parameters. 
 - Constructors are methods, but more special ones because they can only be called using **new** and specifically used to create an instance of an object. 
 - **copy constructor** refers to a constructor that takes in an instance of the class as a parameter and deep copies the instance variables from other object into this one. 
 
