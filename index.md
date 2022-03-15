@@ -220,7 +220,7 @@ public class Student {
 - This is an issue that if attempt to access sanything of the form `other.<something>` such as `other.name` or `other.getID()`, a NullPointerExceptionError will get thrown.  
 - To avoid, ensure `other` is not null before accessing anything inside `other`. 
 
-- With copy constructor define for Student, we can crate a deeop copy over in main method: 
+- With copy constructor define for Student, we can crate a deep copy over in main method: 
 
 ```
 Student student1 = new Student("Finn", 1287);
