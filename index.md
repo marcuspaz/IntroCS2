@@ -229,7 +229,7 @@ Student student2 = new Student(student1); // deep copy
 # Copy Construtor with Arrays 
 
 - Arrays themselves are also objects, while tempting to type something like `this.array = other.array` this is simply a shallow copy. 
-- Propr deep copy creating deep copies of each instance variable - simple task for primitive types. 
+- Proper deep copy creating deep copies of each instance variable - simple task for primitive types. 
 - If object being copies has instance variables that are also objects, we must also create deep copies of each of those objects. 
 
 **For example:**
