@@ -620,5 +620,37 @@ for (String s : avengers) {
 }
 ```
 - For each loop above, the first thing to go in parentheses, type of element in the ArrayList, then a variable to use as the name to reference each element in the list in turn, then a colon, and finally name of the ArrayList. 
-- 
+- Forces to iterate over all the contents of the list - often something we want do, such as when we watn to print the contents of the list. 
+- add() can be used alos to insert an element at a specific position, does not overwrite the element at that position, but rather shifts the elements from that index onward. 
+
+```
+avengers.add(3, "Captain Marvel");
+
+// Outputting the names with the above for loop would yield:
+Iron Man
+Captain America
+Thor
+Captain Marvel
+Black Widow
+The Incredible Hulk
+```
+- we do want to overwrite the elment at specific position, we can use the set() method: 
+```
+avengers.set(4, "Black Panther"); // Overwrites the 5th elements with "Black Panther"
+
+// The list is now:
+Iron Man
+Captain America
+Thor
+Captain Marvel
+Black Panther
+The Incredible Hulk 
+```
+
+**Nuances about using ArrayList**
+
+1. ArrayLists are not efficient as array, if running lots and lots of data it can slow down program. 
+2. The square bracket notation for arrays is generally easier to use that the < > notation for ArrayLists.
+3. **ArrayLists can only contain objets as element** You can declare an ArrayList to contain primitive types like int, double, boolean, char. etc. 
+
 
