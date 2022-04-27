@@ -654,3 +654,9 @@ The Incredible Hulk
 3. **ArrayLists can only contain objets as element** You can declare an ArrayList to contain primitive types like int, double, boolean, char. etc. 
 
 
+
+
+**April 27th 2022**
+#Hash Tables 
+
+
