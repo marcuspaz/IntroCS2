@@ -654,9 +654,30 @@ The Incredible Hulk
 3. **ArrayLists can only contain objets as element** You can declare an ArrayList to contain primitive types like int, double, boolean, char. etc. 
 
 
-
+---
 
 **April 27th 2022**
-#Hash Tables 
 
+# Preclass 
+
+- Linear Equation (MAD) 
+- [(a*k+b) % P] % N 
+- Example of Universal Hashing 
+- Every bit in the equation 
+- **Example: **a = 15, b = 3, p = 19, n = 6 
+- **h(k) = [(15*2+3) % 19] 6 **
+- 1**4 % 6 = 2 **
+
+# Why use a Hash Table 
+- In ArrayMap, a get() operation of a single entry has a runtime of O(n) 
+- We will see later that this can be improved to O(log n) by storing the elements in a sorted way (we will use a binary search tree) 
+- In the simplest version, suppose the keys are integers from 0 to N-1. Create an array of size N. Store the ma with key k at index K of the array. This is known as direct addressing 
+- Accessing a specific index of the array requires no searching or traversing, so it takes constant time to add elements and constant time to find/access elements
+
+# Hash Tables: 
+
+- Hash table, key itself doesn't give index, but instrad, we compute an index directly from the key using a hashCode/hashFunction 
+- Otherwise, we manipulate the key to convert it into an array index, then that index gives the location of the entry (in constant time!)
+- To use less memory, we compress similar elements 
+- 
 
