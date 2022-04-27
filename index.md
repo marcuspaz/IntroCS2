@@ -652,6 +652,25 @@ The Incredible Hulk
 1. ArrayLists are not efficient as array, if running lots and lots of data it can slow down program. 
 2. The square bracket notation for arrays is generally easier to use that the < > notation for ArrayLists.
 3. **ArrayLists can only contain objets as element** You can declare an ArrayList to contain primitive types like int, double, boolean, char. etc. 
+---
+# Iterators: 
+
+Changes to SLL: 
+
+The first line now looks like this: 
+
+`public class SLL <T>  implements Iterable<T> { 
+
+The following method is added to SLL: 
+''public Iterator <T> iterator(){
+return new SLLiterator();
+}`
+
+SLL now includes an inner class called SLLIterator: 
+
+SLLIterator maintains an instance variable called current that keeps track of which Node value to return next 
+SLlIterator has a constructor, a hasNext() method and a next() method 
+SLLIterator has remove() but optional (will implement in lab) 
 
 
 ---
@@ -679,5 +698,38 @@ The Incredible Hulk
 - Hash table, key itself doesn't give index, but instrad, we compute an index directly from the key using a hashCode/hashFunction 
 - Otherwise, we manipulate the key to convert it into an array index, then that index gives the location of the entry (in constant time!)
 - To use less memory, we compress similar elements 
-- 
+- Sometimes more than one entry falls at the same array index. This is called a "collision". One way to hadle this problem is with "separate chaining". We create a "bucket" at each index so that we can hold more than one entry at each index. 
 
+# Hash Functions: 
+
+A hash function typically has two components: 
+- a hash code (converts underlying data into int, should scramble the data from the key to reduce collisions) 
+- a compression function (after conversion, mapping the has code **which is now an int** to another smaller integer) 
+- in Java, the hashCode() is a method built into every class, which from now on we must always include a hashCode() method in the classes we write 
+
+# Hash Codes: 
+
+- purpose of hashCode() method is to represent the data stored in an object as an integer 
+- two objects that evaluate as equals() must give the same hashCode() 
+- ideally, all the data in the object contribute to the hashCode. Differences in the data ideally result in different hashCodes, to the extent possible 
+- primitive type s byte, char, and shower can simply be cast to an int 
+- primitive variable x of type float can be coneverted into an int using Float.floatToIntBits(x)
+- types long and double use more bytes of memory than an int, we can produce a good hash code by combining the bits in some way 
+
+# Compression Functions: 
+
+- once we have converted the underlying data to an int, we need to compress it to an index lyinf in the range [0, N-1]; 
+- Divison method: Map the int key K using the function 
+**h(k) = k (mod N)**
+
+# Collisions, Load Factors, and Rehashing 
+**Collisions**:
+- occurs when two unequal keys have the same hash value 
+- no way to avoid collising when hashing, but there ways to deal with them: 
+1. Chaining: store the entries in buckets (SLL), adding to the head of the list each time a new entry is added to the bucket 
+2. Open-addressing (linar probing or quadratic probing) 
+
+**Load Factors**: 
+- The load factor of hash map is lambda = n / N where n is the number of entries in the table, and N is the size of the table 
+- For chaining, keep the load below 0.9. For open-addressing keep below 0.5 
+- when load factor goes beyond our limit, the hash table becaomes inefficient. We must increase the size of the table. This gives a new hashing function 
