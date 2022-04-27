@@ -666,7 +666,7 @@ The Incredible Hulk
 - Every bit in the equation 
 - **Example: **a = 15, b = 3, p = 19, n = 6 
 - **h(k) = [(15*2+3) % 19] 6 **
-- 1**4 % 6 = 2 **
+- **4 % 6 = 2 **
 
 # Why use a Hash Table 
 - In ArrayMap, a get() operation of a single entry has a runtime of O(n) 
