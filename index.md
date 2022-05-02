@@ -733,3 +733,8 @@ A hash function typically has two components:
 - The load factor of hash map is lambda = n / N where n is the number of entries in the table, and N is the size of the table 
 - For chaining, keep the load below 0.9. For open-addressing keep below 0.5 
 - when load factor goes beyond our limit, the hash table becaomes inefficient. We must increase the size of the table. This gives a new hashing function 
+
+**May 2nd, 2022**
+- Review practice questions for dynamic arrays/iterator 
+- Quiz Wednesday: Hash Theory 
+
